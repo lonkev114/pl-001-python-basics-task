@@ -137,11 +137,7 @@ def remove_from_cart(
     update_product(
         storage,
         product_id,
-        (
-            product[NAME_INDEX],
-            product[PRICE_INDEX],
-            product[QUANTITY_INDEX] + quantity,
-        ),
+        (product[NAME_INDEX], product[PRICE_INDEX], product[QUANTITY_INDEX] + quantity),
     )
 
     new_quantity = in_cart - quantity
